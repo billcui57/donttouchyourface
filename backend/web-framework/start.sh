@@ -1,0 +1,1 @@
+gunicorn -b 0.0.0.0:3000 -w 2 web-framework:app &> console.log &
