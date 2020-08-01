@@ -14,7 +14,8 @@ def create_app():
     migrate.init(app)
     sockio.init(app)
 
-    
+
 
     from app.websockets import bp as ws_bp
     app.register_blueprint(ws_bp)
+
