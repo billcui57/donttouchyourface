@@ -1,7 +1,21 @@
 import React from 'react';
 import './App.scss';
+import { w3cwebsocket as W3CWebSocket } from "websocket";
+
+
+const client = new W3CWebSocket(process.env.APIURL || "http://localhost:3000")
 
 class App extends React.Component {
+
+  constructor() {
+    client.onopen = () => {
+      console.log('WebSocket Client Connected');
+    };
+    client.onmessage = (message) => {
+      console.log(message);
+    };
+  }
+
 
 
 
@@ -29,16 +43,16 @@ class App extends React.Component {
 
   render() {
     return (
-     
-       
-    <div class = "container-fluid text-center">
-      <h1 class = "display-4">Camera Feed</h1>
-       <video muted autoPlay class = "brand-video border-primary"  id="video"></video>
-    </div>
-        
-      
-      
-   
+
+
+      <div class="container-fluid text-center">
+        <h1 class="display-4">Camera Feed</h1>
+        <video muted autoPlay class="brand-video border-primary" id="video"></video>
+      </div>
+
+
+
+
     );
   }
 
