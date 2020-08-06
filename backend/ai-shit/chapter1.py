@@ -10,5 +10,4 @@ imgDialation = cv2.dilate(imgCanny, ())
 cv2.imshow("Gray Image", imgGray)
 cv2.imshow("Blue Image", imgBlur)
 cv2.imshow("Canny Image", imgCanny)
-
 cv2.waitKey(0)
