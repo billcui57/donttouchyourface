@@ -5,14 +5,11 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
 socketio = SocketIO(app)
 
-@app.route('/')
-def index():
-    return render_template('./index.html')
 
 
 @socketio.on('connect')
 def handleMessage():
-    socket.send("User ha connected")
+    socketio.send("User ha connected")
 
 
 

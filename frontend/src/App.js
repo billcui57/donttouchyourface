@@ -1,19 +1,22 @@
 import React from 'react';
 import './App.scss';
-import { w3cwebsocket as W3CWebSocket } from "websocket";
-
-
-const client = new W3CWebSocket(process.env.APIURL || "http://localhost:3000")
+import socketIOClient from "socket.io-client";
+const ENDPOINT = "http://127.0.0.1:5000";
 
 class App extends React.Component {
 
+  
   constructor() {
-    client.onopen = () => {
-      console.log('WebSocket Client Connected');
-    };
-    client.onmessage = (message) => {
-      console.log(message);
-    };
+    super();
+
+    const [response, setResponse] = useState("");
+    
+    useEffect(() => {
+      const socket = socketIOClient(ENDPOINT);
+      socket.on("FromAPI", data => {
+        setResponse(data);
+      });
+    }, []);
   }
 
 
@@ -43,19 +46,12 @@ class App extends React.Component {
 
   render() {
     return (
-
-
       <div class="container-fluid text-center">
         <h1 class="display-4">Camera Feed</h1>
         <video muted autoPlay class="brand-video border-primary" id="video"></video>
       </div>
-
-
-
-
     );
   }
-
 }
 
 export default App;

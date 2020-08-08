@@ -1,7 +1,7 @@
 from cv2 import cv2
 
 
-# Load the cascade
+# Load the cascade (model)
 face_cascade = cv2.CascadeClassifier('./train/haarcascade_frontalface_default.xml')
 
 # To capture video from webcam.
@@ -34,7 +34,7 @@ while True:
             "faceWidth": w,
             "faceHeight": h
         })
-        cv2.rectangle(img,(x,y), (x+w,y+h),1 , 2)
+        cv2.rectangle(img,(x,y), (x+w,y+h),1 , 2) #draw rect with the coordinates
 
     for face in faceDetections:
         if ((face['faceX'] < handX + handWidth) and
@@ -46,7 +46,7 @@ while True:
             print("not intersecting")
 
 
-    # Display
+    # Display img on canvas (screen)
     cv2.imshow('img', img)
     # Stop if escape key is pressed
     k = cv2.waitKey(30) & 0xff
