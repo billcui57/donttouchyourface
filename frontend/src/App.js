@@ -1,37 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.scss';
 import socketIOClient from "socket.io-client";
 const ENDPOINT = "http://127.0.0.1:5000";
 
-class App extends React.Component {
+const socket = socketIOClient.connect(ENDPOINT)
 
-  
-  constructor() {
-    super();
+function App() {
 
-    const [response, setResponse] = useState("");
+  const [state, setState] = useState({
     
-    useEffect(() => {
-      const socket = socketIOClient(ENDPOINT);
-      socket.on("FromAPI", data => {
-        setResponse(data);
-      });
-    }, []);
-  }
+  })
 
-
-
+  useEffect(() => {
+    componentDidMount()
+  })
 
   //determines whether or not the user's browser supports a webcam or if they even have a webcam
-  hasGetUserMedia() {
+  function hasGetUserMedia() {
     return !!(navigator.mediaDevices &&
       navigator.mediaDevices.getUserMedia)
   }
 
   //first thing to get run after the constructor and after the component is loaded
-  async componentDidMount() {
+  async function componentDidMount() {
     //if user has a webcam
-    if (this.hasGetUserMedia()) {
+    if (hasGetUserMedia()) {
       //gets the video element
       const video = document.getElementById('video')
       navigator.getUserMedia(
@@ -44,14 +37,15 @@ class App extends React.Component {
     }
   }
 
-  render() {
-    return (
-      <div class="container-fluid text-center">
-        <h1 class="display-4">Camera Feed</h1>
-        <video muted autoPlay class="brand-video border-primary" id="video"></video>
-      </div>
-    );
-  }
+
+  return (
+    <div className="container-fluid text-center">
+      <h1 className="display-4">Camera Feed</h1>
+      <video muted autoPlay className="brand-video border-primary" id="video"></video>
+    </div>
+  );
+
+
 }
 
 export default App;
