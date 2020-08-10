@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     componentDidMount()
-  })
+  });
 
   //determines whether or not the user's browser supports a webcam or if they even have a webcam
   function hasGetUserMedia() {
@@ -27,9 +27,10 @@ function App() {
     if (hasGetUserMedia()) {
       //gets the video element
       const video = document.getElementById('video')
-      navigator.getUserMedia(
-        { video: {} },
-        stream => video.srcObject = stream, //makes the video output what the webcam sees
+      navigator.mediaDevices.getUserMedia({ video: true }).then(
+        stream => video.srcObject = stream
+      ).catch(
+        //makes the video output what the webcam sees
         err => console.error(err)
       )
     } else {
