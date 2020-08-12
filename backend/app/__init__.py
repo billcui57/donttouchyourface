@@ -9,7 +9,10 @@ socketio = SocketIO(app)
 
 @socketio.on('connect')
 def handleMessage():
+    print("connected")
     socketio.send("User ha connected")
+
+
 
 
 

@@ -12,7 +12,7 @@ function App() {
   })
 
   useEffect(() => {
-    componentDidMount()
+    init()
   })
 
   //determines whether or not the user's browser supports a webcam or if they even have a webcam
@@ -22,7 +22,7 @@ function App() {
   }
 
   //first thing to get run after the constructor and after the component is loaded
-  async function componentDidMount() {
+  async function init() {
     //if user has a webcam
     if (hasGetUserMedia()) {
       //gets the video element
