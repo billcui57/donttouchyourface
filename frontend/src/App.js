@@ -1,12 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
-import socketIOClient from "socket.io-client";
-const ENDPOINT = "http://127.0.0.1:5000";
 
-const socket = socketIOClient.connect(ENDPOINT)
+
 
 function App() {
-  const ws = new WebSocket("/videostream")
+  const ws = new WebSocket("ws://127.0.0.1:5000")
   const [state, setState] = useState({
     
   })

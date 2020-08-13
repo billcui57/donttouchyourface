@@ -3,17 +3,28 @@
  * Debug mode: on
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
  * Restarting with stat
+/home/billcui/network_share/projects/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:812: UserWarning: Neither SQLALCHEMY_DATABASE_URI nor SQLALCHEMY_BINDS is set. Defaulting SQLALCHEMY_DATABASE_URI to "sqlite:///:memory:".
+  warnings.warn(
+/home/billcui/network_share/projects/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:833: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  warnings.warn(FSADeprecationWarning(
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
  * Debugger is active!
  * Debugger PIN: 328-272-212
 /home/billcui/network_share/projects/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:812: UserWarning: Neither SQLALCHEMY_DATABASE_URI nor SQLALCHEMY_BINDS is set. Defaulting SQLALCHEMY_DATABASE_URI to "sqlite:///:memory:".
   warnings.warn(
 /home/billcui/network_share/projects/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:833: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
   warnings.warn(FSADeprecationWarning(
-127.0.0.1 - - [13/Aug/2020 10:14:50] "[37mGET / HTTP/1.1[0m" 200 -
-127.0.0.1 - - [13/Aug/2020 10:14:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Aug/2020 10:16:37] "[37mGET / HTTP/1.1[0m" 200 -
-127.0.0.1 - - [13/Aug/2020 10:16:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-/home/billcui/network_share/projects/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:812: UserWarning: Neither SQLALCHEMY_DATABASE_URI nor SQLALCHEMY_BINDS is set. Defaulting SQLALCHEMY_DATABASE_URI to "sqlite:///:memory:".
-  warnings.warn(
-/home/billcui/network_share/projects/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:833: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-  warnings.warn(FSADeprecationWarning(
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+127.0.0.1 - - [13/Aug/2020 13:14:33] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:14:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [13/Aug/2020 13:14:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [13/Aug/2020 13:15:04] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:15:04] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:15:11] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:15:11] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:15:30] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:15:30] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:15:35] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [13/Aug/2020 13:15:35] "[37mGET / HTTP/1.1[0m" 200 -
+/home/billcui/network_share/projects/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_socketio/__init__.py:552: Warning: Silently ignoring app.run() because the application is run from the flask command line executable.  Consider putting app.run() behind an if __name__ == "__main__" guard to silence this warning.
+  app.run(host=host, port=port, threaded=True,
