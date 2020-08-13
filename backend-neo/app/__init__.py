@@ -16,5 +16,4 @@ def create_app(config_class=ApiConfig):
 
     from app.websockets import bp as websockets_bp
     app.register_blueprint(websockets_bp)
-
     return app
