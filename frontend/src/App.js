@@ -6,16 +6,14 @@ const ENDPOINT = "http://127.0.0.1:5000";
 const socket = socketIOClient.connect(ENDPOINT)
 
 function App() {
-
+  const ws = new WebSocket("/videostream")
   const [state, setState] = useState({
     
   })
 
   useEffect(() => {
-
-    init()
-  })
-
+    componentDidMount()
+  });
 
   //determines whether or not the user's browser supports a webcam or if they even have a webcam
   function hasGetUserMedia() {
@@ -24,17 +22,18 @@ function App() {
   }
 
   //first thing to get run after the constructor and after the component is loaded
-  async function init() {
+  async function componentDidMount() {
     //if user has a webcam
     if (hasGetUserMedia()) {
       //gets the video element
       const video = document.getElementById('video')
       navigator.mediaDevices.getUserMedia({ video: true }).then(
-        stream => video.srcObject = stream
+        stream => {video.srcObject = stream; ws.send(stream)}
       ).catch(
         //makes the video output what the webcam sees
         err => console.error(err)
       )
+      
     } else {
       alert('Do you have a webcam?');
     }
