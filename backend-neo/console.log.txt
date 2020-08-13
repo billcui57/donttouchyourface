@@ -1,0 +1,40 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:4000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 336-849-335
+/mnt/c/Users/billc/Documents/Websites/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:812: UserWarning: Neither SQLALCHEMY_DATABASE_URI nor SQLALCHEMY_BINDS is set. Defaulting SQLALCHEMY_DATABASE_URI to "sqlite:///:memory:".
+  warnings.warn(
+/mnt/c/Users/billc/Documents/Websites/donttouchyourface/backend-neo/env/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:833: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  warnings.warn(FSADeprecationWarning(
+127.0.0.1 - - [12/Aug/2020 20:58:00] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [12/Aug/2020 20:58:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [12/Aug/2020 21:00:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [12/Aug/2020 21:01:20] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLUw4 HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:22] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLVF4 HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:24] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLVjj HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:27] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLWVG HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:32] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLXjc HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:37] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLYx- HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:42] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLaAS HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:47] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLbOq HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:52] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLcej HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:53] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLcus HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:01:55] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLdG_ HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:00] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLeVH HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:05] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLfjk HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:10] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLgy9 HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:15] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLiAZ HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:20] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLjP1 HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:25] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLkdX HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:30] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLlrz HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:35] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLn4H HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:40] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLoIh HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:45] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLpX5 HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:50] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLqlX HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:02:55] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLrzv HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:03:00] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLtCJ HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:03:05] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLuQr HTTP/1.1[0m" 400 -
+127.0.0.1 - - [12/Aug/2020 21:03:10] "[31m[1mGET /socket.io/?EIO=3&transport=polling&t=NFbLvfH HTTP/1.1[0m" 400 -
