@@ -13,6 +13,7 @@ def create_app(config_class=ApiConfig):
     db.init_app(app)
     migrate.init_app(app, db)
     socketio.init_app(app)
+    socketio.run(app)
 
     from app.websockets import bp as websockets_bp
     app.register_blueprint(websockets_bp)
