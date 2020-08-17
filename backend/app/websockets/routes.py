@@ -5,10 +5,14 @@ from app import socketio
 def index():
     return {"howdy": "all"}
 
-@socketio.on("json", namespace="/videostream")
+
+
+@socketio.on("stream")
 def handleMessage(message):
     print(message)
+    print("hi")
 
-@socketio.on("connect", namespace="/videostream")
+@socketio.on("connect")
 def handleConnect():
     print("hi")
+

@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
+const io = require('socket.io-client')
 
 
 
 function App() {
-  const ws = new WebSocket("ws://127.0.0.1:5000")
+  const ws = io("ws://127.0.0.1:5000")
   const [state, setState] = useState({
     
   })
@@ -26,7 +27,7 @@ function App() {
       //gets the video element
       const video = document.getElementById('video')
       navigator.mediaDevices.getUserMedia({ video: true }).then(
-        stream => {video.srcObject = stream; ws.send(stream)}
+        stream => {video.srcObject = stream; ws.emit('stream',stream)}
       ).catch(
         //makes the video output what the webcam sees
         err => console.error(err)
@@ -37,6 +38,7 @@ function App() {
     }
   }
 
+  
 
   return (
     <div className="container-fluid text-center">
