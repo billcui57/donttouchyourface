@@ -10,9 +10,8 @@ def index():
 @socketio.on("stream")
 def handleMessage(message):
     print(message)
-    print("hi")
 
 @socketio.on("connect")
 def handleConnect():
-    print("hi")
+    print("connected")
 
