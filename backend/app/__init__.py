@@ -4,10 +4,12 @@ from flask import Flask
 from Config import ApiConfig
 from flask_socketio import SocketIO
 
+
 # db = SQLAlchemy()
 # migrate = Migrate()
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins='*')
+
 
 
 # def create_app(config_class=ApiConfig):

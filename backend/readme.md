@@ -1,0 +1,1 @@
+PLEASE MAKE SURE THAT YOU HAVE DONE ```sudo apt-get install python3-venv``` FIRST IF YOU HAVE A LINUX MACHINE

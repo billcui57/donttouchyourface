@@ -15,11 +15,9 @@ def index():
 def handleMessage(message):
     print(message)
 
-    
-
 @socketio.on("connect")
 def handleConnect():
-    print("hi")
+    print("connected")
 
 @socketio.on("disconnect")
 def handleDisconnect():
