@@ -1,14 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
-const io = require('socket.io-client')
-
+import io from 'socket.io-client'
 
 
 function App() {
-  const ws = io("ws://127.0.0.1:5000")
-  const [state, setState] = useState({
-    
-  })
+  const ws = io('http://localhost:5000')
+
 
   useEffect(() => {
     componentDidMount()

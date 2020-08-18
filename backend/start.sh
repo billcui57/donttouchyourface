@@ -25,7 +25,10 @@ export FLASK_APP=app
 export FLASK_ENV=development
 
 
-flask run --host=0.0.0.0 &> console.log.txt & tail -f console.log.txt
+flask run --host=0.0.0.0 
+
+
+
 
 
 
