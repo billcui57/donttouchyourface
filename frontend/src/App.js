@@ -31,7 +31,7 @@ function App() {
       loadSockets()
 
       navigator.mediaDevices.getUserMedia({ video: true }).then(
-        stream => { video.srcObject = stream; setInterval(() => ws.emit('stream', stream), 0.1) }
+        stream => { video.srcObject = stream; setInterval(() => ws.emit('stream', {'hello': 'yo'}), 0.1) }
       ).catch(
         //makes the video output what the webcam sees
         err => console.error(err)
@@ -50,6 +50,10 @@ function App() {
 
     ws.on("disconnect", () => {
       setConnectionStatus(() => false)
+    })
+
+    ws.on("stream", (message) => {
+      console.log(message)
     })
   }
 
