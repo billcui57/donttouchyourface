@@ -13,7 +13,7 @@ def index():
 
 @socketio.on("stream")
 def handleMessage(message):
-    print(message)
+    socketio.emit("stream", message)
 
 @socketio.on("connect")
 def handleConnect():
