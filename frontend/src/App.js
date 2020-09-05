@@ -4,7 +4,7 @@ import io from 'socket.io-client'
 
 
 function App() {
-  const ws = io('http://localhost:5000')
+  const ws = io('/api/test')
 
 
   useEffect(() => {
@@ -26,12 +26,25 @@ function App() {
     //if user has a webcam
     if (hasGetUserMedia()) {
       //gets the video element
-      const video = document.getElementById('video')
 
       loadSockets()
 
       navigator.mediaDevices.getUserMedia({ video: true }).then(
-        stream => { video.srcObject = stream; setInterval(() => ws.emit('stream', {'hello': 'yo'}), 0.1) }
+        mediaStream => {
+          const track = mediaStream.getVideoTracks()[0];
+          let imageCapture = new ImageCapture(track);
+
+          setInterval(() => {
+            imageCapture.grabFrame()
+              .then(imageBitmap => {
+                ws.emit("stream-client", imageBitmap.toString('base64'))
+              })
+              .catch(error => console.log(error));
+          }, 10)
+
+        }
+
+
       ).catch(
         //makes the video output what the webcam sees
         err => console.error(err)
@@ -52,17 +65,23 @@ function App() {
       setConnectionStatus(() => false)
     })
 
-    ws.on("stream", (message) => {
-      console.log(message)
+    ws.on("stream-server", (base64) => {
+      console.log(base64)
+      var c = document.getElementById("frame");
+      var ctx = c.getContext("2d");
+     
+      ctx.drawImage(base64, 10, 10);
     })
+
+
   }
 
 
   return (
     <div className="container-fluid text-center">
       <h1 className="display-4">Camera Feed</h1>
-      <video muted autoPlay className="brand-video border-primary" id="video"></video>
-      <div>{wsStatus? <h2>Connected</h2> : <h2>Disconnected</h2>}</div>
+      <canvas alt="a frame" id="frame"></canvas>
+      <div>{wsStatus ? <h2>Connected</h2> : <h2>Disconnected</h2>}</div>
     </div>
   );
 

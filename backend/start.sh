@@ -21,11 +21,11 @@ fi
 
 source ./env/bin/activate
 pip3 install -r requirements.txt
-export FLASK_APP=app
+export FLASK_APP=start.py
 export FLASK_ENV=development
 
 
-flask run --host=0.0.0.0 
+flask run 
 
 
 

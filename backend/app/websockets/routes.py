@@ -1,9 +1,6 @@
 from app.websockets import bp
 from app import socketio
-import logging
 
-
-logging.basicConfig(level=logging.DEBUG)
 
 @bp.route('/')
 def index():
@@ -11,14 +8,15 @@ def index():
 
 
 
-@socketio.on("stream")
-def handleMessage(message):
-    socketio.emit("stream", message)
+@socketio.on("stream-client", namespace="/api/test")
+def handleBase64Frame(base64):
+    socketio.emit("stream-server", base64)
+    print(base64)
 
-@socketio.on("connect")
+@socketio.on("connect", namespace="/api/test")
 def handleConnect():
     print("connected")
 
-@socketio.on("disconnect")
+@socketio.on("disconnect", namespace="/api/test")
 def handleDisconnect():
     print("disconnected")
