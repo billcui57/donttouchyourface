@@ -30,6 +30,7 @@ function App() {
       loadSockets()
 
       navigator.mediaDevices.getUserMedia({ video: true }).then(
+<<<<<<< HEAD
         mediaStream => {
           const track = mediaStream.getVideoTracks()[0];
           let imageCapture = new ImageCapture(track);
@@ -45,6 +46,13 @@ function App() {
         }
 
 
+=======
+        stream => { video.srcObject = stream; setInterval(() => {
+          console.log("emitting " + stream)
+          ws.emit('client-stream', stream);
+
+        }, 0.1) }
+>>>>>>> 5d0a2c750fbdb98c7f7b8d6b10cf51f60722c852
       ).catch(
         //makes the video output what the webcam sees
         err => console.error(err)
